@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="errw">
+    <property name="width-request">200</property>
+    <property name="height-request">100</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">AM Password Manager</property>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="label" translatable="yes">Apologies, but your entry already exists</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="main_w">
+    <property name="width-request">445</property>
+    <property name="height-request">245</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">AM Password Manager</property>
+    <signal name="destroy" handler="quitButtonClicked" swapped="no"/>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="shadow-type">in</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkButton" id="mybtn">
+                    <property name="label" translatable="yes">Submit</property>
+                    <property name="width-request">90</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <signal name="clicked" handler="getPermission" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">255</property>
+                    <property name="y">102</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="password">
+                    <property name="width-request">168</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="visibility">False</property>
+                    <property name="input-purpose">password</property>
+                    <signal name="activate" handler="getPermission" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">47</property>
+                    <property name="y">102</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="mylbl">
+                    <property name="width-request">203</property>
+                    <property name="height-request">63</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Please Enter Root Password</property>
+                  </object>
+                  <packing>
+                    <property name="x">121</property>
+                    <property name="y">15</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="mwstf"/>
+    </style>
+  </object>
+  <object class="GtkWindow" id="passwindow">
+    <property name="width-request">500</property>
+    <property name="height-request">350</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">AM Password Manager</property>
+    <signal name="destroy" handler="quitButtonClicked" swapped="no"/>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolledwindow1">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="shadow-type">in</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="mail">
+                    <property name="width-request">168</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">282</property>
+                    <property name="y">55</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="pass">
+                    <property name="width-request">168</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">282</property>
+                    <property name="y">147</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">E-mail:</property>
+                  </object>
+                  <packing>
+                    <property name="x">176</property>
+                    <property name="y">56</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Password:</property>
+                  </object>
+                  <packing>
+                    <property name="x">177</property>
+                    <property name="y">148</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">Add</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <signal name="clicked" handler="addstf" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">104</property>
+                    <property name="y">237</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">Get</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <signal name="clicked" handler="getstf" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">267</property>
+                    <property name="y">236</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="loc">
+                    <property name="width-request">168</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">12</property>
+                    <property name="y">99</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">55</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">location:</property>
+                  </object>
+                  <packing>
+                    <property name="x">44</property>
+                    <property name="y">39</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="wrongw">
+    <property name="width-request">200</property>
+    <property name="height-request">100</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">AM Password Manager</property>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="label" translatable="yes">Permission Denied. Password Incorrect.</property>
+      </object>
+    </child>
+  </object>
+</interface>
